@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shruthi sakamuri - Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #444040;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            display: none;
+        }
+        footer {
+            background-color :#332f2f;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Shruthi Sakamuri</h1>
+    <h4>Student</h4>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a motivated and passionate computer science student with a keen interest in technology and problem-solving. Throughout my academic journey, I have developed a strong foundation in programming languages such as C++, Python, JavaScript, and Java.</p>
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+        <li> <b>Project-1</b><br>CGPA CALCULATOR | C++, Object-Oriented Programming<br>Input Gathering: Design a user interface where users can input their course grades
+            and corresponding credit hours.
+            Calculation Logic: Implement the backend logic to convert letter grades to grade
+            points, calculate weighted averages, and compute the CGPA.
+            Result Display: Present the calculated CGPA to the user, ensuring clarity and
+            accuracy in the presentation of academic performance.</li>
+        <li><b>Project 2</b><br>Employee Management System | Using Doubly Linked List<br>Employee Data Structure: Define a struct to represent employee information, including attributes such as
+            employee ID, name, position, salary, etc.
+            Doubly Linked List Implementation: Create functions to perform operations on the doubly linked list,
+            including insertion, deletion, searching, and updating employee records.
+            User Interface: Develop a user interface to interact with the employee management system, allowing users
+            to add, remove, search for, and modify employee records, providing a seamless experience for managing
+            employee data.</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me via email at <a href="mailto:shruthi_sakamur@srmap.edu.in">shruthi_sakamur@srmap.edu.in</a>.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Shruthi Sakamuri</p>
+</footer>
+
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                targetSection.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
